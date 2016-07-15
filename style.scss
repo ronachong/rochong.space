@@ -155,6 +155,9 @@ img {
 }
 
 .masthead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
   text-align: center;
