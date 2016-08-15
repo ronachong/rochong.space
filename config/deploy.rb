@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock '3.5.0'
 
-set :application, 'kusamochi'
-set :repo_url, 'git@github.com:ronachong/kusamochi.git'
+set :application, 'rochong.space'
+set :repo_url, 'git@github.com:ronachong/rochong.space.git'
 set :branch, 'master'
 
 # Default branch is :master
@@ -10,7 +10,8 @@ set :branch, 'master'
 
 # Specify deploy_to directory as
 # set :deploy_to, '/var/www/kusamochi.com/public_html/'
-set :deploy_to, '/home/admin/kusamochi/'
+set :deploy_to, '/home/deploy/rochong.space/'
+set :tmp_dir, '/home/deploy/tmp'
 
 # Default value for :scm is :git
 # set :scm, :git
