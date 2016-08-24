@@ -3,6 +3,7 @@ console.log("loading index");
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/header.js';
+import Menu from './components/menu.js';
 
 var Site = React.createClass({
     getInitialState: function() {
@@ -14,6 +15,7 @@ var Site = React.createClass({
         return (
             <div>
                 <Header title={this.state.title} />
+                <Menu />
                 <p>Text</p>
             </div>
         )
