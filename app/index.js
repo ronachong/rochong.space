@@ -1,7 +1,8 @@
-console.log("Test");
+console.log("loading index");
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Header from './components/header.js';
 
 var Site = React.createClass({
     getInitialState: function() {
@@ -11,13 +12,12 @@ var Site = React.createClass({
     },
     render: function () {
         return (
-            <Header title={this.state.title} />
-            <div>Testing</div>
+            <div>
+                <Header title={this.state.title} />
+                <p>Text</p>
+            </div>
         )
     }
 });
 
-ReactDOM.render(<Test />, document.getElementById('app'));
-
-//var app = document.getElementById('app');
-//app.innerHTML =
+ReactDOM.render(<Site />, document.getElementById('app'));
