@@ -6,6 +6,14 @@ import Header from './components/header.js';
 import Menu from './components/menu.js';
 import Footer from './components/footer.js';
 
+const styles = {
+    main : {
+        flexGrow: 1,
+        display: 'flex',
+        flexDirection: 'column'
+    }
+};
+
 var Site = React.createClass({
     getInitialState: function() {
         return {
@@ -14,7 +22,7 @@ var Site = React.createClass({
     },
     render: function () {
         return (
-            <div>
+            <div style={styles.main} >
                 <Header title={this.state.title} />
                 <Menu />
                 <p>Text</p>
