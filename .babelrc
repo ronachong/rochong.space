@@ -1,0 +1,5 @@
+// .babelrc instructs babel-loader to transform JSX into JS (react transform)
+
+{
+  "presets": [ "react", "es2015" ]
+}
