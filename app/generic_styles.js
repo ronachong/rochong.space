@@ -7,7 +7,8 @@ const generic = {
         paddingLeft: '2em'
     },
     dev : {
-        borderStyle: 'solid'
+        borderStyle: 'solid',
+        borderWidth: '2px'
     }
 };
 
