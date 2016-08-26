@@ -21,7 +21,8 @@ const styles = {
 var Site = React.createClass({
     getInitialState: function() {
         return {
-            title: 'rochong.space'
+            title: 'rochong',
+            view: 'main'
         }
     },
     render: function () {
@@ -29,7 +30,7 @@ var Site = React.createClass({
             <div style={Object.assign({}, styles.main, generic.dev)} >
                 <Header title={this.state.title} />
                 <Menu />
-                <SiteBody />
+                <SiteBody view={this.state.view} />
                 <Footer />
             </div>
         )
