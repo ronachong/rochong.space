@@ -10,9 +10,9 @@ import Footer from './components/footer.js';
 
 const styles = {
     main : {
-        flexGrow: 1,
+        flexGrow: 1,                // allow site div to take up browser window
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column'     // arrange site components vertically
     }
 };
 
