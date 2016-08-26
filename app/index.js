@@ -3,6 +3,7 @@ console.log("loading index");
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import generic from './generic_styles.js';
 import Header from './components/header.js';
 import Menu from './components/menu.js';
 import SiteBody from './components/sitebody.js'
@@ -12,7 +13,8 @@ const styles = {
     main : {
         flexGrow: 1,                // allow site div to take up browser window
         display: 'flex',
-        flexDirection: 'column'     // arrange site components vertically
+        flexDirection: 'column',    // arrange site components vertically
+        padding: '0 4em'            // padding of 4em left and right of cmps
     }
 };
 
@@ -24,7 +26,7 @@ var Site = React.createClass({
     },
     render: function () {
         return (
-            <div style={styles.main} >
+            <div style={Object.assign({}, styles.main, generic.dev)} >
                 <Header title={this.state.title} />
                 <Menu />
                 <SiteBody />
