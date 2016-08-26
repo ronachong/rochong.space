@@ -7,7 +7,8 @@ const styles = {
     menu : {
         display: 'flex',
         flexDirection: 'row',
-        listStyle: 'none'
+        listStyle: 'none',
+        paddingLeft: 0
     },
     li : {
         textAlign: 'center',
