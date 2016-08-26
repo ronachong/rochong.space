@@ -4,7 +4,7 @@ import React from 'react';
 
 const styles = {
     footer : {
-        margin: '0 0 0 10px',
+        //
     },
 };
 
