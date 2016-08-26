@@ -12,6 +12,7 @@ const styles = {
     title : {
         fontFamily: "'Dosis', sans-serif",
         fontSize: '4.2em',
+        letterSpacing: '0.17em',
         color: 'white',
         textAlign: 'center'
     }
