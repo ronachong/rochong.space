@@ -30,12 +30,12 @@ var BlogContainer = React.createClass({
     render: function(){
         var blogs = tobeimported.map(function(entry){
             return <Blog title={entry.title} text={entry.text} key={entry.id} />
-        })
+        });
         return (
             <section style={Object.assign({}, styles.mainbody, generic.dev)} >
                 {blogs}
             </section>
-        )
+        );
     }
 });
 
