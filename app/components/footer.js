@@ -15,7 +15,10 @@ const styles = {
 const Footer = (props) => (
     <footer style={Object.assign({}, styles.footer, generic.dev)} >
         <p>© rochong.space</p>
-        <p style={styles.textSmall} >Made with ReactJS, webpack, and love.</p>
+        <p style={styles.textSmall} >
+            Made with ReactJS, CSS3, webpack, and love.
+            Should be viewed in a modern, updated browser.
+        </p>
     </footer>
 );
 
