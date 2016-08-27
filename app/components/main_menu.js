@@ -1,4 +1,4 @@
-console.log("loading menu");
+console.log("loading main menu");
 
 import React from 'react';
 import generic from '../generic_styles.js'
@@ -9,10 +9,10 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-between',
-        listStyle: 'none',
-        padding: 0,
-        marginBottom: 0
+        justifyContent: 'space-between',    // spread li's out vertically
+        listStyle: 'none',          // remove default decoration
+        padding: 0,                 // set padding to back to 0
+        marginBottom: 0             // set bottom margin back to 0
     },
     li : {
         width: '13vw',              // make li's relative to window, circular
@@ -25,25 +25,27 @@ const styles = {
     },
     h3 : {
         fontSize: '1em',
-        margin: 0
+        margin: 0                   // set top and bottom margins back to 0
     }
 };
 
-const MainMenu = (props) => (
-    <ul style={Object.assign({}, styles.menu, generic.dev)} >
-        <li style={Object.assign({}, styles.li, generic.dev)} >
-            <h3 style={styles.h3} >Blog</h3>
-        </li>
-        <li style={Object.assign({}, styles.li, generic.dev)} >
-            <h3 style={styles.h3} >Live Projects</h3>
-        </li>
-        <li style={Object.assign({}, styles.li, generic.dev)} >
-            <h3 style={styles.h3} >Resource Log</h3>
-        </li>
-        <li style={Object.assign({}, styles.li, generic.dev)} >
-            <h3 style={styles.h3} >Post-Mortems</h3>
-        </li>
-    </ul>
+var MainMenu = React.createClass({
+    render: function(){
+        var listitems = this.props.options.map(function(option){
+            return <MenuButton option={option} key={option} />
+        });
+        return (
+            <ul style={Object.assign({}, styles.menu, generic.dev)} >
+                {listitems}
+            </ul>
+        );
+    }
+});
+
+const MenuButton = (props) => (
+    <li style={Object.assign({}, styles.li, generic.dev)} >
+        <h3 style={styles.h3} >{props.option}</h3>
+    </li>
 );
 
 export default MainMenu;
