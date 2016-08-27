@@ -22,7 +22,7 @@ var Site = React.createClass({
     getInitialState: function() {
         return {
             title: 'rochong',
-            view_options: ['Main', 'Resume', 'About']
+            view_options: ['Main', 'Resume', 'About'],
             view: 'main'
         }
     },
