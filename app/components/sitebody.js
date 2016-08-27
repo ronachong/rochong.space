@@ -27,6 +27,7 @@ var SiteBody = React.createClass({
 var MainView = React.createClass({
     getInitialState: function() {
         return {
+            options: ['Blog', 'Live Projects', 'Resource Log', 'Post-Mortems'],
             view: 'blog'
         }
     },
@@ -34,7 +35,7 @@ var MainView = React.createClass({
         return (
             <section style={Object.assign({}, styles.sitebody, styles.mainview, generic.dev)} >
                 <MainBody view={this.state.view} />
-                <MainMenu />
+                <MainMenu options={this.state.options} />
             </section>
         )
     }
