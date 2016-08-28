@@ -16,13 +16,37 @@ const styles = {
 const tobeimported = [
     {
         id: 1,
-        title: "Foo project title",
+        title: "AirBnB Clone",
         text: "Foo text",
         url: "https://www.rochong.space"
     },
     {
         id: 2,
-        title: "Foo project title 2",
+        title: "Twitter Clone",
+        text: "Foo text 2",
+        url: "https://www.kusagashi.com"
+    },
+    {
+        id: 3,
+        title: "GoldCrests",
+        text: "Foo text 2",
+        url: "https://www.kusagashi.com"
+    },
+    {
+        id: 4,
+        title: "WikiKitty",
+        text: "Foo text 2",
+        url: "https://www.kusagashi.com"
+    },
+    {
+        id: 5,
+        title: "Double Lariat",
+        text: "Foo text 2",
+        url: "https://www.kusagashi.com"
+    },
+    {
+        id: 6,
+        title: "Kusamochi",
         text: "Foo text 2",
         url: "https://www.kusagashi.com"
     }
