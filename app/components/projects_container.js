@@ -17,19 +17,26 @@ var tobeimported = [
     {
         id: 1,
         title: "Foo project title",
-        text: "Foo text"
+        text: "Foo text",
+        url: "https://www.rochong.space"
     },
     {
         id: 2,
         title: "Foo project title 2",
-        text: "Foo text 2"
+        text: "Foo text 2",
+        url: "https://www.kusagashi.com"
     }
 ];
 
 var ProjectsContainer = React.createClass({
     render: function(){
         var projects = tobeimported.map(function(project){
-            return <Project title={project.title} text={project.text} key={project.id} />
+            return <Project
+                title={project.title}
+                text={project.text}
+                url={project.url}
+                key={project.id}
+            />
         });
         return (
             <section style={Object.assign({}, styles.mainbody, generic.dev)} >
@@ -41,7 +48,9 @@ var ProjectsContainer = React.createClass({
 
 const Project = (props) => (
     <section style={Object.assign({}, styles.blog, generic.dev)} >
-        <h2>{props.title}</h2>
+        <h2>
+            <a href={props.url} >{props.title}</a>
+        </h2>
         <p>{props.text}</p>
     </section>
 );
