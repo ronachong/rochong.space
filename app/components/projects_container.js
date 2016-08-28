@@ -8,8 +8,10 @@ const styles = {
     mainbody : {
         width: '80%'
     },
-    blog : {
-        //
+    project : {
+        display: 'flex',            // set flex such that children can be posxned
+        flexDirection: 'column',    // arrange children vertically
+        alignItems: 'center'        // center content horizontally
     }
 };
 
@@ -71,7 +73,7 @@ var ProjectsContainer = React.createClass({
 });
 
 const Project = (props) => (
-    <section style={Object.assign({}, styles.blog, generic.dev)} >
+    <section style={Object.assign({}, styles.project, generic.dev)} >
         <h2>
             <a href={props.url} >{props.title}</a>
         </h2>
