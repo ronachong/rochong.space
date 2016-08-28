@@ -6,7 +6,8 @@ import generic from '../generic_styles.js'
 
 const styles = {
     mainbody : {
-        width: '80%'
+        width: '80%',
+        overflowY: 'auto'
     },
     project : {
         display: 'flex',            // set flex such that children can be posxned
