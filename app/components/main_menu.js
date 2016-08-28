@@ -15,13 +15,19 @@ const styles = {
         marginBottom: 0             // set bottom margin back to 0
     },
     li : {
-        width: '13vw',              // make li's relative to window, circular
-        height: '13vw',             // make li's relative to window, circular
-        borderRadius: '50%',        // make li's circular
+        //
+    },
+    button: {
+        width: '10vh',              // make btns relative to window, circular
+        height: '10vh',             // make btns relative to window, circular
+        borderRadius: '50%',        // make btns circular
         display: 'flex',            // enable flex for posxning of children
-        justifyContent: 'center',   // center h3's inside li's, horizontally
-        alignItems: 'center',       // center h3's inside li's, vertically
-        margin: '20% 0'             // vertical breathing rm around li's
+        justifyContent: 'center',   // center h3's inside btns, horizontally
+        alignItems: 'center',       // center h3's inside btns, vertically
+        margin: '40% 0'             // vertical breathing rm around btns
+    },
+    button_selected : {
+        backgroundColor: 'red'
     },
     h3 : {
         fontSize: '1em',
@@ -32,8 +38,13 @@ const styles = {
 var MainMenu = React.createClass({
     render: function(){
         var listitems = this.props.options.map(function(option){
-            return <MenuButton option={option} key={option} />
-        });
+            return <MenuButton
+                option={option}
+                view={this.props.view}
+                changeView={this.props.changeView}
+                key={option}
+            />
+        }, this);
         return (
             <ul style={Object.assign({}, styles.menu, generic.dev)} >
                 {listitems}
@@ -42,10 +53,29 @@ var MainMenu = React.createClass({
     }
 });
 
-const MenuButton = (props) => (
-    <li style={Object.assign({}, styles.li, generic.dev)} >
-        <h3 style={styles.h3} >{props.option}</h3>
-    </li>
-);
+var MenuButton = React.createClass({
+    handleClick: function() {
+        // call function to change view of MainView
+        this.props.changeView(this.props.option)
+    },
+    render: function(){
+        var appliedStyles = (
+            this.props.option == this.props.view ? Object.assign({}, styles.button, styles.button_selected, generic.dev) : Object.assign({}, styles.button, generic.dev)
+        );
+        return (
+            <li>
+                <button style={appliedStyles} onClick={this.handleClick} >
+                    <h3 style={styles.h3} >{this.props.option}</h3>
+                </button>
+            </li>
+        );
+    }
+});
+
+// const MenuButton = (props) => (
+//     <li style={Object.assign({}, styles.li, generic.dev)} >
+//         <h3 style={styles.h3} >{props.option}</h3>
+//     </li>
+// );
 
 export default MainMenu;

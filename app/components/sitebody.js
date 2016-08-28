@@ -22,23 +22,32 @@ var SiteBody = React.createClass({
             return (<MainView />)
         }
     }
-})
+});
 
 var MainView = React.createClass({
     getInitialState: function() {
         return {
             options: ['Blog', 'Live Projects', 'Resource Log', 'Post-Mortems'],
-            view: 'blog'
+            view: 'Blog'
         }
+    },
+    changeView: function(new_view){
+        this.setState({
+            view: new_view
+        });
     },
     render: function(){
         return (
             <section style={Object.assign({}, styles.sitebody, styles.mainview, generic.dev)} >
                 <MainBody view={this.state.view} />
-                <MainMenu options={this.state.options} />
+                <MainMenu
+                    options={this.state.options}
+                    view={this.state.view}
+                    changeView={this.changeView}
+                />
             </section>
         )
     }
-})
+});
 
 export default SiteBody;

@@ -7,10 +7,10 @@ import ProjectsContainer from './projects_container.js'
 
 var MainBody = React.createClass({
     render: function(){
-        if (this.props.view == 'blog') {
+        if (this.props.view == 'Blog') {
             return (<BlogContainer />)
         };
-        if (this.props.view == 'projects') {
+        if (this.props.view == 'Live Projects') {
             return (<ProjectsContainer />)
         };
     }
