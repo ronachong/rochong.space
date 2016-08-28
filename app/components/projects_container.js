@@ -13,7 +13,7 @@ const styles = {
     }
 };
 
-var tobeimported = [
+const tobeimported = [
     {
         id: 1,
         title: "Foo project title",
