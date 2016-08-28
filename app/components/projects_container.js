@@ -77,6 +77,7 @@ const Project = (props) => (
         <h2>
             <a href={props.url} >{props.title}</a>
         </h2>
+        <a href={props.url} ><iframe src={props.url} ></iframe></a>
         <p>{props.text}</p>
     </section>
 );
