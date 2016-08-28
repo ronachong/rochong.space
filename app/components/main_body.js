@@ -9,10 +9,10 @@ var MainBody = React.createClass({
     render: function(){
         if (this.props.view == 'blog') {
             return (<BlogContainer />)
-        }
+        };
         if (this.props.view == 'projects') {
             return (<ProjectsContainer />)
-        }
+        };
     }
 });
 
