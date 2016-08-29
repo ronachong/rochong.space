@@ -22,15 +22,24 @@ var Site = React.createClass({
     getInitialState: function() {
         return {
             title: 'rochong',
-            view_options: ['Main', 'Resume', 'About'],
-            view: 'main'
+            viewOptions: ['Main', 'Resume', 'About'],
+            view: 'Main'
         }
+    },
+    changeView: function(newView){
+        this.setState({
+            view: newView
+        });
     },
     render: function () {
         return (
             <div style={Object.assign({}, styles.main, generic.dev)} >
                 <Header title={this.state.title} />
-                <Menu options={this.state.view_options} />
+                <Menu
+                    options={this.state.viewOptions}
+                    view={this.state.view}
+                    changeView={this.changeView}
+                />
                 <SiteBody view={this.state.view} />
                 <Footer />
             </div>
