@@ -3,50 +3,16 @@ console.log("loading site body");
 import React from 'react';
 
 import generic from '../generic_styles.js'
-import MainBody from './main_body.js'
-import MainMenu from './main_menu.js'
-
-const styles = {
-    sitebody : {
-        flexGrow: 1,            // ensure that sitebody expands to space available
-    },
-    mainview : {
-        display: 'flex',        // ensure that cmps in sitebody can expand
-        flexDirection: 'row'    // arrange cmps in sitebody horizontally
-    }
-};
+import MainView from './main_view.js'
 
 var SiteBody = React.createClass({
     render: function(){
-        if (this.props.view == 'main') {
+        if (this.props.view == 'Main') {
             return (<MainView />)
+        };
+        if (this.props.view == 'Resume') {
+            return <ResumeView />
         }
-    }
-});
-
-var MainView = React.createClass({
-    getInitialState: function() {
-        return {
-            options: ['Blog', 'Live Projects', 'Resource Log', 'Post-Mortems'],
-            view: 'Blog'
-        }
-    },
-    changeView: function(new_view){
-        this.setState({
-            view: new_view
-        });
-    },
-    render: function(){
-        return (
-            <section style={Object.assign({}, styles.sitebody, styles.mainview, generic.dev)} >
-                <MainBody view={this.state.view} />
-                <MainMenu
-                    options={this.state.options}
-                    view={this.state.view}
-                    changeView={this.changeView}
-                />
-            </section>
-        )
     }
 });
 

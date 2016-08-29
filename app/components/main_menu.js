@@ -72,10 +72,4 @@ var MenuButton = React.createClass({
     }
 });
 
-// const MenuButton = (props) => (
-//     <li style={Object.assign({}, styles.li, generic.dev)} >
-//         <h3 style={styles.h3} >{props.option}</h3>
-//     </li>
-// );
-
 export default MainMenu;
