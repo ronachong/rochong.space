@@ -1,6 +1,7 @@
 console.log("loading header");
 
 import React from 'react';
+
 import generic from '../generic_styles.js'
 
 const styles = {
