@@ -14,7 +14,8 @@ const styles = {
         fontSize: '4.2em',
         letterSpacing: '0.17em',
         color: 'white',
-        textAlign: 'center'
+        textAlign: 'center',
+        paddingBottom: '.25em'
     }
 };
 

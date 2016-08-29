@@ -18,19 +18,23 @@ const styles = {
         //
     },
     button: {
-        width: '10vh',              // make btns relative to window, circular
-        height: '10vh',             // make btns relative to window, circular
+        width: '8vh',              // make btns relative to window, circular
+        height: '8vh',             // make btns relative to window, circular
         borderRadius: '50%',        // make btns circular
         display: 'flex',            // enable flex for posxning of children
         justifyContent: 'center',   // center h3's inside btns, horizontally
         alignItems: 'center',       // center h3's inside btns, vertically
-        margin: '40% 0'             // vertical breathing rm around btns
+        margin: '2vh 0'             // vertical breathing rm around btns
     },
     button_selected : {
-        backgroundColor: 'red'
+        width: '10vh',
+        height: '10vh',
     },
     h3 : {
+        fontFamily: 'Dosis',
         fontSize: '1em',
+        letterSpacing: '0.17em',
+        color: 'white',
         margin: 0                   // set top and bottom margins back to 0
     }
 };
@@ -60,7 +64,7 @@ var MenuButton = React.createClass({
     },
     render: function(){
         var appliedStyles = (
-            this.props.option == this.props.view ? Object.assign({}, styles.button, styles.button_selected, generic.dev) : Object.assign({}, styles.button, generic.dev)
+            this.props.option == this.props.view ? Object.assign({}, styles.button, styles.button_selected, generic.bkgGreen, generic.dev) : Object.assign({}, styles.button, generic.bkgBlue, generic.dev)
         );
         return (
             <li>

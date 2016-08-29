@@ -15,13 +15,11 @@ const styles = {
         flexGrow: 1
     },
     button : {
+        borderStyle: 'None',
         background: 'None'
     },
     h3 : {
-        fontSize: '1.5em',
-    },
-    h3_selected : {
-        color: 'green'
+        fontSize: '1.1em',
     }
 };
 
@@ -50,7 +48,7 @@ var MenuOption = React.createClass({
     },
     render: function(){
         var appliedStyles = (
-            this.props.option == this.props.view ? Object.assign({}, styles.h3, styles.h3_selected) : styles.h3
+            this.props.option == this.props.view ? Object.assign({}, styles.h3, generic.textGreen) : styles.h3
         );
         return (
             <li style={styles.li} >

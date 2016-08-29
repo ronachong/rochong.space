@@ -4,6 +4,7 @@ import React from 'react';
 
 import generic from '../generic_styles.js'
 import MainView from './main_view.js'
+import ResumeView from './resume_view.js'
 
 var SiteBody = React.createClass({
     render: function(){
@@ -11,8 +12,8 @@ var SiteBody = React.createClass({
             return (<MainView />)
         };
         if (this.props.view == 'Resume') {
-            return <ResumeView />
-        }
+            return (<ResumeView />)
+        };
     }
 });
 

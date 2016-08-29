@@ -13,7 +13,7 @@ const styles = {
 };
 
 const Footer = (props) => (
-    <footer style={Object.assign({}, styles.footer, generic.dev)} >
+    <footer style={Object.assign({}, styles.footer, generic.bkgGreenRev, generic.dev)} >
         <p>© rochong.space</p>
         <p style={styles.textSmall} >
             Made with ReactJS, CSS3, webpack, and love.

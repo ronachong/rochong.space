@@ -42,7 +42,7 @@ var BlogContainer = React.createClass({
 
 const Blog = (props) => (
     <section style={Object.assign({}, styles.blog, generic.dev)} >
-        <h2>{props.title}</h2>
+        <h2 style={generic.textGreen} >{props.title}</h2>
         <p>{props.text}</p>
     </section>
 );
