@@ -22,8 +22,8 @@ const generic = {
         backgroundColor: '#3477DB'
     },
     dev : {
-        borderStyle: 'solid',
-        borderWidth: '2px'
+        // borderStyle: 'solid',
+        // borderWidth: '2px'
     }
 };
 

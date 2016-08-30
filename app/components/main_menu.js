@@ -21,6 +21,7 @@ const styles = {
         width: '8vh',              // make btns relative to window, circular
         height: '8vh',             // make btns relative to window, circular
         borderRadius: '50%',        // make btns circular
+        borderStyle: 'None',
         display: 'flex',            // enable flex for posxning of children
         justifyContent: 'center',   // center h3's inside btns, horizontally
         alignItems: 'center',       // center h3's inside btns, vertically

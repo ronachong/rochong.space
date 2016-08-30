@@ -14,7 +14,7 @@ const styles = {
         flexGrow: 1,                // allow site div to take up browser window
         display: 'flex',
         flexDirection: 'column',    // arrange site components vertically
-        padding: '0 4em'            // padding of 4em left and right of cmps
+        //padding: '0 4em'            // padding of 4em left and right of cmps
     }
 };
 
