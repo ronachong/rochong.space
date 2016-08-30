@@ -1,7 +1,9 @@
 console.log("loading header");
 
 import React from 'react';
-import generic from '../generic_styles.js'
+
+import generic from '../generic_styles.js';
+import Menu from './menu.js';
 
 const styles = {
     header : {
@@ -19,10 +21,19 @@ const styles = {
     }
 };
 
-const Header = (props) => (
-    <header style={Object.assign({}, styles.header, generic.dev)} >
-        <h1 style={styles.title} >{props.title}</h1>
-    </header>
-);
+var Header = React.createClass({
+    render: function() {
+        return (
+            <header style={Object.assign({}, styles.header, generic.dev)} >
+                <h1 style={styles.title} >{this.props.title}</h1>
+                <Menu
+                    options={this.props.options}
+                    view={this.props.view}
+                    changeView={this.props.changeView}
+                />
+            </header>
+        );
+    }
+});
 
 export default Header;

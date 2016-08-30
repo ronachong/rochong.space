@@ -34,8 +34,8 @@ var Site = React.createClass({
     render: function () {
         return (
             <div style={Object.assign({}, styles.main, generic.dev)} >
-                <Header title={this.state.title} />
-                <Menu
+                <Header
+                    title={this.state.title}
                     options={this.state.viewOptions}
                     view={this.state.view}
                     changeView={this.changeView}

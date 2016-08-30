@@ -48,7 +48,7 @@ var MenuOption = React.createClass({
     },
     render: function(){
         var appliedStyles = (
-            this.props.option == this.props.view ? Object.assign({}, styles.h3, generic.textGreen) : styles.h3
+            this.props.option == this.props.view ? Object.assign({}, styles.h3, generic.textWhite) : styles.h3
         );
         return (
             <li style={styles.li} >

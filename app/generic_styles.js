@@ -9,6 +9,9 @@ const generic = {
     textGreen : {
         color: 'rgba(38,166,91,1)'
     },
+    textWhite : {
+        color: '#FFFFFF'
+    },
     bkgGreen : {
         background: 'linear-gradient(to bottom, rgba(38,166,91,1), rgba(30,155,95,1))'
     },
