@@ -9,7 +9,7 @@ import MainMenu from './main_menu.js'
 const styles = {
     sitebody : {
         flexGrow: 1,            // ensure that sitebody expands to space available
-        padding: '3%',
+        padding: '3% 0 3% 3%',  // same padding as other views, except on right for sidemenu
         overflowY: 'auto'       // scrollbar for vertical overflow
     },
     mainview : {
