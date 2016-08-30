@@ -23,7 +23,7 @@ const styles = {
 var Header = React.createClass({
     render: function() {
         return (
-            <header style={Object.assign({}, styles.header, generic.bkgGreen, generic.dev)} >
+            <header style={Object.assign({}, styles.header, generic.bkgBGreen, generic.dev)} >
                 <h1 style={styles.title} >{this.props.title}</h1>
                 <Menu
                     options={this.props.options}
