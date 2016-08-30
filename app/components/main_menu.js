@@ -18,10 +18,11 @@ const styles = {
         //
     },
     button: {
-        width: '10vmin',              // make btns relative to window, circular
-        height: '10vmin',             // make btns relative to window, circular
+        width: '10vmin',            // make btns relative to window, circular
+        height: '10vmin',           // make btns relative to window, circular
         borderRadius: '50%',        // make btns circular
-        borderStyle: 'None',
+        borderStyle: 'None',        // remove button border
+        outline: 'None',            // remove focus after clicking on btn
         display: 'flex',            // enable flex for posxning of children
         justifyContent: 'center',   // center h3's inside btns, horizontally
         alignItems: 'center',       // center h3's inside btns, vertically

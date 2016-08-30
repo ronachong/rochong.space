@@ -17,7 +17,8 @@ const styles = {
         textAlign: 'center'
     },
     button : {
-        borderStyle: 'None',
+        borderStyle: 'None',        // remove button border
+        outline: 'None',            // remove focus after clicking on btn
         background: 'None'
     },
     h3 : {
