@@ -5,14 +5,16 @@ import generic from '../generic_styles.js';
 
 const styles = {
     menu : {
+        width: '55%',
         display: 'flex',
         flexDirection: 'row',
+        justifyContent: 'space-between',
         listStyle: 'none',
-        padding: '1vh'
+        padding: 0,
+        margin: '.7em auto 1em auto'
     },
     li : {
-        textAlign: 'center',
-        flexGrow: 1
+        textAlign: 'center'
     },
     button : {
         borderStyle: 'None',
@@ -20,6 +22,7 @@ const styles = {
     },
     h3 : {
         fontSize: '1.1em',
+        margin: 0
     }
 };
 
