@@ -17,7 +17,7 @@ const Footer = (props) => (
         <p>© rochong.space</p>
         <p style={styles.textSmall} >
             Made with ReactJS, CSS3, webpack, and love.
-            Should be viewed in a modern, updated browser.
+            View in a modern, updated browser (◕ᴗ◕✿).
         </p>
     </footer>
 );
