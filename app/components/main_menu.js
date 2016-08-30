@@ -18,8 +18,8 @@ const styles = {
         //
     },
     button: {
-        width: '8vh',              // make btns relative to window, circular
-        height: '8vh',             // make btns relative to window, circular
+        width: '10vmin',              // make btns relative to window, circular
+        height: '10vmin',             // make btns relative to window, circular
         borderRadius: '50%',        // make btns circular
         borderStyle: 'None',
         display: 'flex',            // enable flex for posxning of children
@@ -28,12 +28,12 @@ const styles = {
         margin: '2vh 0'             // vertical breathing rm around btns
     },
     button_selected : {
-        width: '10vh',
-        height: '10vh',
+        width: '15vmin',
+        height: '15vmin',
     },
     h3 : {
         fontFamily: 'Dosis',
-        fontSize: '1em',
+        fontSize: '1.7vmin',
         letterSpacing: '0.17em',
         color: 'white',
         margin: 0                   // set top and bottom margins back to 0
