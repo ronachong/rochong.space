@@ -1,6 +1,9 @@
 console.log("loading menu");
 
+import Radium from 'radium';
+import ReactStyleTransitionGroup from 'react-style-transition-group';
 import React from 'react';
+
 import generic from '../generic_styles.js';
 
 const styles = {
@@ -23,18 +26,60 @@ const styles = {
     },
     h3 : {
         fontSize: '1.1em',
-        margin: 0
+        padding: '.2em',
+        margin: 0,
+        ':hover' : {}
+    },
+    h3underline : {
+        position: 'relative',
+        top: '-1.8em',
+        height: '2.1em',
+        borderBottom: 'medium solid white',
+        borderRadius: '.2em',
+        // WebkitTransform: 'scaleX(1)',
+        // transform: 'scaleX(1)',
+        // WebkitTransition: 'all 0.3s ease-in-out 0s',
+        // transition: 'all 0.3s ease-in-out 0s',
+        //
+        // ':hover': {
+        //     WebkitTransform: 'scaleX(1)',
+        //     transform: 'scale(1)'
+        // }
     }
 };
 
+var tstyles = {
+    h3underline : {
+        enter: {
+            transition: 'all 0.3s ease-in-out 0s',
+            transform: 'scaleX(0)',
+            opacity: '0'
+        },
+        enterActive: {
+            transform: 'scaleX(1)',
+            opacity: '1'
+        },
+        leave: {
+            transition: 'all 0.3s ease-in-out 0s',
+            transform: 'scaleX(1)',
+            opacity: '1'
+        },
+        leaveActive: {
+            transform: 'scaleX(0)',
+            opacity: '0'
+        }
+    }
+}
+
+
 var Menu = React.createClass({
     render: function(){
-        var listitems = this.props.options.map(function(option){
+        var listitems = this.props.options.map(function(option, index){
             return <MenuOption
                 option={option}
                 view={this.props.view}
                 changeView={this.props.changeView}
-                key={option}
+                key={'menuOption-' + index}
             />
         }, this);
         return (
@@ -56,12 +101,24 @@ var MenuOption = React.createClass({
         );
         return (
             <li style={styles.li} >
-                <button onClick={this.handleClick} style={styles.button} >
-                    <h2 style={appliedStyles} >{this.props.option}</h2>
-                </button>
+                <ReactStyleTransitionGroup component="div">
+                    <button onClick={this.handleClick} style={styles.button} >
+                        <div key="test" style={styles.h3underline} ></div>
+                        <h2 key="option" style={appliedStyles} >{this.props.option}</h2>
+                        { Radium.getState(this.state, 'option', ':hover') ? (
+                            <OptionHighlight key={'optionHighlight-' + this.props.option} transitionStyles={tstyles.h3underline} />
+                        ) : null }
+                    </button>
+                </ReactStyleTransitionGroup>
             </li>
         );
     }
 });
+
+const OptionHighlight = (props) => (
+    <div style={styles.h3underline} ></div>
+);
+
+MenuOption = Radium(MenuOption);
 
 export default Menu;
