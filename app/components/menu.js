@@ -1,6 +1,9 @@
 console.log("loading menu");
 
+import Radium from 'radium';
+import Transition from 'react-inline-transition-group';
 import React from 'react';
+
 import generic from '../generic_styles.js';
 
 const styles = {
@@ -23,18 +26,41 @@ const styles = {
     },
     h3 : {
         fontSize: '1.1em',
-        margin: 0
+        padding: '.4em',
+        margin: 0,
+        ':hover' : {}
     }
 };
 
+var tstyles = {
+    h3underline : {
+        base: {
+            position: 'relative',
+            top: '-0.2em',
+            borderBottom: '0.22em solid white',
+            borderRadius: '.2em',
+            transform: 'scaleX(0)',
+        },
+        appear: {
+            transform: 'scaleX(1)',
+            transition: 'all 0.3s ease-in-out 0s'
+        },
+        leave: {
+            transform: 'scaleX(0)',
+            transition: 'all 0.3s ease-in-out 0s'
+        }
+    }
+}
+
+
 var Menu = React.createClass({
     render: function(){
-        var listitems = this.props.options.map(function(option){
+        var listitems = this.props.options.map(function(option, index){
             return <MenuOption
                 option={option}
                 view={this.props.view}
                 changeView={this.props.changeView}
-                key={option}
+                key={'menuOption-' + index}
             />
         }, this);
         return (
@@ -57,11 +83,28 @@ var MenuOption = React.createClass({
         return (
             <li style={styles.li} >
                 <button onClick={this.handleClick} style={styles.button} >
-                    <h2 style={appliedStyles} >{this.props.option}</h2>
+                    <h2 key="option" style={appliedStyles} >{this.props.option}</h2>
+                    <Transition
+                        childrenBaseStyle={tstyles.h3underline.base}
+                        childrenAppearStyle={tstyles.h3underline.appear}
+                        childrenEnterStyle={tstyles.h3underline.appear}
+                        childrenLeaveStyle={tstyles.h3underline.leave}
+                        // onChildLeft=
+                    >
+                        { Radium.getState(this.state, 'option', ':hover') ? (
+                            <OptionHighlight key={'optionHighlight-' + this.props.option} />
+                        ) : null }
+                    </Transition>
                 </button>
             </li>
         );
     }
 });
+
+const OptionHighlight = (props) => (
+    <div></div>
+);
+
+MenuOption = Radium(MenuOption);
 
 export default Menu;
