@@ -27,6 +27,7 @@ const styles = {
     h3 : {
         fontSize: '1.1em',
         padding: '.4em',
+        color: 'white',
         margin: 0,
         ':hover' : {}
     }
@@ -38,7 +39,6 @@ var tstyles = {
             position: 'relative',
             top: '-0.2em',
             borderBottom: '0.22em solid white',
-            borderRadius: '.2em',
             transform: 'scaleX(0)',
         },
         appear: {
@@ -80,6 +80,7 @@ var MenuOption = React.createClass({
         var appliedStyles = (
             this.props.option == this.props.view ? Object.assign({}, styles.h3, generic.textWhite) : styles.h3
         );
+
         return (
             <li style={styles.li} >
                 <button onClick={this.handleClick} style={styles.button} >
@@ -91,9 +92,13 @@ var MenuOption = React.createClass({
                         childrenLeaveStyle={tstyles.h3underline.leave}
                         // onChildLeft=
                     >
-                        { Radium.getState(this.state, 'option', ':hover') ? (
+                        { this.props.option == this.props.view ? (
                             <OptionHighlight key={'optionHighlight-' + this.props.option} />
                         ) : null }
+                        { (Radium.getState(this.state, 'option', ':hover') && this.props.option != this.props.view) ? (
+                            <OptionHighlight key={'optionHighlight-' + this.props.option} />
+                        ) : null }
+
                     </Transition>
                 </button>
             </li>
