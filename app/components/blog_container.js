@@ -43,9 +43,6 @@ var tobeimported = [
 var BlogContainer = React.createClass({
     render: function(){
         var blogs = tobeimported.map(function(entry){
-            console.log(text_20160901_00);
-            console.log(entry.id);
-            console.log(entry.text);
             return <Blog
                 title={entry.title}
                 date={entry.date}
