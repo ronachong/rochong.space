@@ -1,6 +1,9 @@
 console.log("loading main menu");
 
+import Radium from 'radium';
+import Transition from 'react-inline-transition-group';
 import React from 'react';
+
 import generic from '../generic_styles.js'
 
 const styles = {
@@ -23,12 +26,21 @@ const styles = {
         borderRadius: '50%',        // make btns circular
         borderStyle: 'None',        // remove button border
         outline: 'None',            // remove focus after clicking on btn
+        backgroundColor: 'rgba(52, 119, 219, 1)',
+        background: 'linear-gradient(to bottom, rgba(52, 119, 219, 1), rgba(52, 119, 219, 1))',
         display: 'flex',            // enable flex for posxning of children
         justifyContent: 'center',   // center h3's inside btns, horizontally
         alignItems: 'center',       // center h3's inside btns, vertically
-        margin: '2vh 0'             // vertical breathing rm around btns
+        margin: '2vh 0',             // vertical breathing rm around btns
+        transition: 'all 0.1s ease-in-out 0s',
+        ':hover' : {
+            width: '15vmin',
+            height: '15vmin',
+            background: 'linear-gradient(to bottom, rgba(52, 119, 219, 1), rgba(38,166,91,1))'
+        }
     },
     button_selected : {
+        background: 'linear-gradient(to bottom, rgba(38,166,91,1), rgba(52, 119, 219, 1))',
         width: '15vmin',
         height: '15vmin',
     },
@@ -66,7 +78,7 @@ var MenuButton = React.createClass({
     },
     render: function(){
         var appliedStyles = (
-            this.props.option == this.props.view ? Object.assign({}, styles.button, styles.button_selected, generic.bkgGreen, generic.dev) : Object.assign({}, styles.button, generic.bkgBlue, generic.dev)
+            this.props.option == this.props.view ? Object.assign({}, styles.button, styles.button_selected, generic.dev) : Object.assign({}, styles.button, generic.dev)
         );
         return (
             <li>
@@ -77,5 +89,7 @@ var MenuButton = React.createClass({
         );
     }
 });
+
+MenuButton = Radium(MenuButton);
 
 export default MainMenu;

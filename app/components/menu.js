@@ -33,25 +33,6 @@ const styles = {
     }
 };
 
-var tstyles = {
-    h3underline : {
-        base: {
-            position: 'relative',
-            top: '-0.2em',
-            borderBottom: '0.22em solid white',
-            transform: 'scaleX(0)',
-        },
-        appear: {
-            transform: 'scaleX(1)',
-            transition: 'all 0.3s ease-in-out 0s'
-        },
-        leave: {
-            transform: 'scaleX(0)',
-            transition: 'all 0.3s ease-in-out 0s'
-        }
-    }
-}
-
 
 var Menu = React.createClass({
     render: function(){
@@ -80,6 +61,25 @@ var MenuOption = React.createClass({
         var appliedStyles = (
             this.props.option == this.props.view ? Object.assign({}, styles.h3, generic.textWhite) : styles.h3
         );
+
+        var tstyles = {
+            h3underline : {
+                base: {
+                    position: 'relative',
+                    top: '-0.2em',
+                    borderBottom: '0.22em solid white',
+                    transform: 'scaleX(0)',
+                },
+                appear: {
+                    transform: 'scaleX(1)',
+                    transition: 'all 0.3s ease-in-out 0s'
+                },
+                leave: {
+                    transform: 'scaleX(0)',
+                    transition: 'all 0.3s ease-in-out 0s'
+                }
+            }
+        }
 
         return (
             <li style={styles.li} >
