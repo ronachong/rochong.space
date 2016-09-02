@@ -27,7 +27,7 @@ const styles = {
         borderStyle: 'None',        // remove button border
         outline: 'None',            // remove focus after clicking on btn
         backgroundColor: generic.blue,
-        background: 'linear-gradient(to bottom, generic.blue, generic.blue, 1))',
+        background: generic.BGgradient,
         display: 'flex',            // enable flex for posxning of children
         justifyContent: 'center',   // center h3's inside btns, horizontally
         alignItems: 'center',       // center h3's inside btns, vertically
