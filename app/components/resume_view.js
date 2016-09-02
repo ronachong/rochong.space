@@ -3,6 +3,7 @@ console.log("loading main view");
 import React from 'react';
 
 import generic from '../generic_styles.js'
+import generalized from '../generalized_styles.js';
 import MainBody from './main_body.js'
 import MainMenu from './main_menu.js'
 
@@ -37,11 +38,8 @@ const styles = {
     resumecolR : {
         width: '35%'
     },
-    h2 : {
-        color: 'blue',
-        fontFamily: "'Dosis', sans-serif",
-        fontSize: '1.5em'
-    },
+    h1 : generalized.contentHeadings,
+    h2 : generalized.contentSubheadings,
     h3 : {
         fontSize: '1.2em'
     },
@@ -101,7 +99,7 @@ const ResumeRow2 = (props) => (
 
 const ResumeTitle = (props) => (
     <section>
-        <h1>Rona Chong</h1>
+        <h1 style={styles.h1} >Rona Chong</h1>
         <p>
             <a href="https://github.com/ronachong">https://github.com/ronachong</a> | <a href="https://www.rochong.space">https://www.rochong.space</a>
         </p>

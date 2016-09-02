@@ -3,6 +3,7 @@ console.log("loading blog container");
 import React from 'react';
 
 import generic from '../generic_styles.js';
+import generalized from '../generalized_styles.js';
 import text from '../content/2016-09-01_opening-post.js';
 
 const styles = {
@@ -17,6 +18,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'row'
     },
+    blogh2 : generalized.contentHeadings,
     blogdate : {
         marginLeft: '7%',
         paddingTop: '1em',
@@ -70,7 +72,7 @@ var Blog = React.createClass({
         return (
             <section style={Object.assign({}, styles.blog, generic.dev)} >
                 <span style={styles.blogspan} >
-                    <h2 style={generic.textGreen} >{this.props.title}</h2>
+                    <h2 style={styles.blogh2} >{this.props.title}</h2>
                     <h3 style={styles.blogdate} >{this.props.date}</h3>
                 </span>
                 {blogParagraphs}

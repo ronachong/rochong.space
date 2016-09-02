@@ -26,8 +26,8 @@ const styles = {
         borderRadius: '50%',        // make btns circular
         borderStyle: 'None',        // remove button border
         outline: 'None',            // remove focus after clicking on btn
-        backgroundColor: 'rgba(52, 119, 219, 1)',
-        background: 'linear-gradient(to bottom, rgba(52, 119, 219, 1), rgba(52, 119, 219, 1))',
+        backgroundColor: generic.blue,
+        background: 'linear-gradient(to bottom, generic.blue, generic.blue, 1))',
         display: 'flex',            // enable flex for posxning of children
         justifyContent: 'center',   // center h3's inside btns, horizontally
         alignItems: 'center',       // center h3's inside btns, vertically
@@ -36,16 +36,16 @@ const styles = {
         ':hover' : {
             width: '15vmin',
             height: '15vmin',
-            background: 'linear-gradient(to bottom, rgba(52, 119, 219, 1), rgba(38,166,91,1))'
+            background: generic.BGgradient
         }
     },
     button_selected : {
-        background: 'linear-gradient(to bottom, rgba(38,166,91,1), rgba(52, 119, 219, 1))',
+        background: generic.GBgradient,
         width: '15vmin',
         height: '15vmin',
     },
     h3 : {
-        fontFamily: 'Dosis',
+        fontFamily: generic.titleFont,
         fontSize: '1.7vmin',
         letterSpacing: '0.17em',
         color: 'white',

@@ -10,7 +10,7 @@ const styles = {
         //
     },
     title : {
-        fontFamily: "'Dosis', sans-serif",
+        fontFamily: generic.titleFont,
         fontSize: '5em',
         letterSpacing: '0.17em',
         color: 'white',
