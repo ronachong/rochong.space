@@ -2,7 +2,8 @@ console.log("loading projects container");
 
 import React from 'react';
 
-import generic from '../generic_styles.js'
+import generalized from '../generalized_styles.js';
+import generic from '../generic_styles.js';
 
 const styles = {
     mainbody : {
@@ -14,6 +15,7 @@ const styles = {
         flexDirection: 'column',    // arrange children vertically
         alignItems: 'center'        // center content horizontally
     },
+    projectHeadings : generalized.contentSubheadings,
     iframe_container : {
         width: '275px',
         height: '300px',
@@ -36,38 +38,38 @@ const tobeimported = [
     {
         id: 1,
         title: "AirBnB Clone",
-        text: "Foo text",
-        url: "https://www.rochong.space"
+        text: "To be added",
+        url: ""
     },
     {
         id: 2,
         title: "Twitter Clone",
         text: "Foo text 2",
-        url: "http://stilettoheelsteam.net"
+        url: "http://krisbredemeier.github.io/holbertonschool-impossible_octopus_fitness/index.html"
     },
     {
         id: 3,
         title: "GoldCrests",
-        text: "Foo text 2",
-        url: "http://stilettoheelsteam.net"
+        text: "To be added",
+        url: ""
     },
     {
         id: 4,
         title: "WikiKitty",
-        text: "Foo text 2",
-        url: "http://stilettoheelsteam.net"
+        text: "To be added",
+        url: ""
     },
     {
         id: 5,
         title: "Double Lariat",
-        text: "Foo text 2",
-        url: "http://stilettoheelsteam.net"
+        text: "To be added",
+        url: ""
     },
     {
         id: 6,
         title: "Kusamochi",
-        text: "Foo text 2",
-        url: "http://stilettoheelsteam.net"
+        text: "To be added",
+        url: ""
     }
 ];
 
@@ -91,7 +93,7 @@ var ProjectsContainer = React.createClass({
 
 const Project = (props) => (
     <section style={Object.assign({}, styles.project, generic.dev)} >
-        <h2>
+        <h2 style={styles.projectHeadings} >
             <a href={props.url} >{props.title}</a>
         </h2>
         <a href={props.url} >
