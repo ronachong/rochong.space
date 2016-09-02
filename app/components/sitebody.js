@@ -5,6 +5,7 @@ import React from 'react';
 import generic from '../generic_styles.js'
 import MainView from './main_view.js'
 import ResumeView from './resume_view.js'
+import AboutView from './about_view.js'
 
 var SiteBody = React.createClass({
     render: function(){
@@ -13,6 +14,9 @@ var SiteBody = React.createClass({
         };
         if (this.props.view == 'Resume') {
             return (<ResumeView />)
+        };
+        if (this.props.view == 'About') {
+            return <AboutView />
         };
     }
 });
