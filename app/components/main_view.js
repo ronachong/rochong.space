@@ -3,20 +3,20 @@ console.log("loading main view");
 import React from 'react';
 
 import generic from '../generic_styles.js'
+import generalized from '../generalized_styles.js'
 import MainBody from './main_body.js'
 import MainMenu from './main_menu.js'
 
-const styles = {
-    sitebody : {
-        flexGrow: 1,            // ensure that sitebody expands to space available
-        padding: '3% 0 3% 3%',  // same padding as other views, except on right for sidemenu
-        overflowY: 'auto'       // scrollbar for vertical overflow
-    },
+var styles = {
+    mainContainer : generalized.siteBody,
     mainview : {
         display: 'flex',        // ensure that cmps in sitebody can expand
         flexDirection: 'row'    // arrange cmps in sitebody horizontally
     }
 };
+
+// remove right padding from main container, to account for side menu
+styles.mainContainer.paddingRight = 0;
 
 var MainView = React.createClass({
     getInitialState: function() {
@@ -32,7 +32,7 @@ var MainView = React.createClass({
     },
     render: function(){
         return (
-            <section style={Object.assign({}, styles.sitebody, styles.mainview, generic.dev)} >
+            <section style={Object.assign({}, styles.mainContainer, styles.mainview, generic.dev)} >
                 <MainBody view={this.state.view} />
                 <MainMenu
                     options={this.state.options}

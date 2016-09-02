@@ -15,6 +15,14 @@ var generalized = {
         fontFamily: generic.titleFont,
         fontSize: '1.2em',
         letterSpacing: '0.17em'
+    },
+    siteBody: {
+        flexGrow: 1,            // sitebody expands to space avl.
+        paddingTop: '3%',
+        paddingBottom: '3%',
+        paddingLeft: '3%',
+        paddingRight: '3%',
+        overflowY: 'auto'       // scrollbar for vertical overflow
     }
 }
 

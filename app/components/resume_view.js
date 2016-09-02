@@ -8,11 +8,7 @@ import MainBody from './main_body.js'
 import MainMenu from './main_menu.js'
 
 const styles = {
-    sitebody : {
-        flexGrow: 1,            // ensure that sitebody expands to space available
-        padding: '3%',
-        overflowY: 'auto'       // scrollbar for vertical overflow
-    },
+    resumeContainer : generalized.siteBody,
     resumeview : {
         display: 'flex',        // ensure that cmps in sitebody can expand
         flexDirection: 'column'    // arrange cmps in sitebody horizontally
@@ -60,7 +56,7 @@ const styles = {
 };
 
 const ResumeView = (props) => (
-    <section style={Object.assign({}, styles.sitebody, styles.resumeview, generic.dev)} >
+    <section style={Object.assign({}, styles.resumeContainer, styles.resumeview, generic.dev)} >
         <ResumeRow1 />
         <ResumeRow2 />
     </section>
