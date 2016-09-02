@@ -12,11 +12,14 @@ var styles = {
     mainview : {
         display: 'flex',        // ensure that cmps in sitebody can expand
         flexDirection: 'row'    // arrange cmps in sitebody horizontally
+    },
+    mainContainer_ext : {
+        paddingRight: 0
     }
 };
 
 // remove right padding from main container, to account for side menu
-styles.mainContainer.paddingRight = 0;
+//styles.mainContainer.paddingRight = 0;
 
 var MainView = React.createClass({
     getInitialState: function() {
@@ -32,7 +35,7 @@ var MainView = React.createClass({
     },
     render: function(){
         return (
-            <section style={Object.assign({}, styles.mainContainer, styles.mainview, generic.dev)} >
+            <section style={Object.assign({}, styles.mainContainer, styles.mainContainer_ext, styles.mainview, generic.dev)} >
                 <MainBody view={this.state.view} />
                 <MainMenu
                     options={this.state.options}
