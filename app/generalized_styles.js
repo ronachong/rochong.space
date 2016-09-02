@@ -20,8 +20,8 @@ var generalized = {
         flexGrow: 1,            // sitebody expands to space avl.
         paddingTop: '3%',
         paddingBottom: '3%',
-        paddingLeft: '3%',
-        paddingRight: '3%',
+        paddingLeft: '5%',
+        paddingRight: '5%',
         overflowY: 'auto'       // scrollbar for vertical overflow
     }
 }
