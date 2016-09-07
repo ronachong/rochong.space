@@ -24,7 +24,8 @@ var styles = {
 var MainView = React.createClass({
     getInitialState: function() {
         return {
-            options: ['Blog', 'Live Projects', 'Resource Log', 'Post-Mortems'],
+            //options: ['Blog', 'Live Projects', 'Resource Log', 'Post-Mortems'],
+            options: ['Blog', 'Live Projects'],
             view: 'Blog'
         }
     },
