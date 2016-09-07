@@ -21,7 +21,7 @@ const Footer = (props) => (
     <footer style={Object.assign({}, styles.footer, generic.bkgBGreenRev, generic.dev)} >
         <p style={styles.copyright} >© rochong.space</p>
         <p style={styles.textSmall} >
-            Made with ReactJS, CSS3, webpack, and love.
+            Made with ReactJS, webpack, and love.
             View in a modern, updated browser (◕ᴗ◕✿).
         </p>
     </footer>
