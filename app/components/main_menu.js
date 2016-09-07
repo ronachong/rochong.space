@@ -15,7 +15,8 @@ const styles = {
         justifyContent: 'space-between',    // spread li's out vertically
         listStyle: 'none',          // remove default decoration
         padding: 0,                 // set padding to back to 0
-        marginBottom: 0             // set bottom margin back to 0
+        marginBottom: 0,             // set bottom margin back to 0
+        marginRight: '2.5%'
     },
     li : {
         //
