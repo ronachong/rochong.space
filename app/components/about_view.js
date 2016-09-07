@@ -26,7 +26,7 @@ const AboutView = (props) => (
         <p>Outside of software engineering and tech, I care about social justice and equity, creative storytelling, and pursuing the simple pleasures of life.</p>
 
         <h2 style={styles.h2} >Contact me</h2>
-        <p>If you are interested in collaborating with me on a project or simply would like to connect with me on a topic related to tech, you can find me on twitter as @ronachng, contact me via LinkedIn, or shoot me an email at rona@holbertonschool.com.</p>
+        <p>If you are interested in collaborating with me on a project or simply would like to connect with me on a topic related to tech, you can find me on twitter as <a href="https://twitter.com/ronachng">@ronachng</a>, contact me via <a href="https://www.linkedin.com/in/rona-chong-15b167b6">LinkedIn</a>, or shoot me an email at rona@holbertonschool.com.</p>
     </section>
 );
 
