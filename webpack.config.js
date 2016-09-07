@@ -17,7 +17,7 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 // webpack.config.js exports the object module.exports.
 // module.exports represents the configs for webpack
 module.exports = {
-  entry: [ './app/index.js' ], // entrypoint for app
+  entry: [ 'test/app/index.js' ], // entrypoint for app
   module: {
     loaders: [
       // run babel-loader transformation on all paths matching test regex in
