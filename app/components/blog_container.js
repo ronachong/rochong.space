@@ -11,9 +11,7 @@ const styles = {
         width: '80%',
         overflowY: 'auto'
     },
-    blog : {
-        paddingRight: '5%'
-    },
+    blog : generalized.mainViewContent,
     blogspan : {
         display: 'flex',
         flexDirection: 'row'

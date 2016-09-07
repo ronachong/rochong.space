@@ -13,7 +13,8 @@ const styles = {
     project : {
         display: 'flex',            // set flex such that children can be posxned
         flexDirection: 'column',    // arrange children vertically
-        alignItems: 'center'        // center content horizontally
+        alignItems: 'center',       // center content horizontally
+        paddingRight: generalized.mainViewContent.paddingRight
     },
     projectHeadings : generalized.contentSubheadings,
     projectDate : {

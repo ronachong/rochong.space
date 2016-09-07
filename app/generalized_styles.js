@@ -23,6 +23,9 @@ var generalized = {
         paddingLeft: '5%',
         paddingRight: '5%',
         overflowY: 'auto'       // scrollbar for vertical overflow
+    },
+    mainViewContent: {
+        paddingRight: '5%'
     }
 }
 
