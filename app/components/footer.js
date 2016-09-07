@@ -13,7 +13,8 @@ const styles = {
         marginBottom: '0.4em'
     },
     textSmall : {
-        fontSize: '0.8em'
+        fontSize: '0.8em',
+        marginBottom: 0
     }
 };
 
